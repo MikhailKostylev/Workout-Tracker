@@ -36,15 +36,15 @@ final class TabBarController: UITabBarController {
         tabBar.layer.borderWidth = 1
         tabBar.layer.masksToBounds = true
         
-        let overviewVC = ViewController()
-        let sessionVC = UIViewController()
-        let progressVC = UIViewController()
-        let settingsVC = UIViewController()
+        let overviewVC = OverviewViewController()
+        let sessionVC = SessionViewController()
+        let progressVC = ProgressViewController()
+        let settingsVC = SettingsViewController()
         
-        let overviewNavigation = UINavigationController(rootViewController: overviewVC)
-        let sessionNavigation = UINavigationController(rootViewController: sessionVC)
-        let progressNavigation = UINavigationController(rootViewController: progressVC)
-        let settingsNavigation = UINavigationController(rootViewController: settingsVC)
+        let overviewNavigation = NavBarController(rootViewController: overviewVC)
+        let sessionNavigation = NavBarController(rootViewController: sessionVC)
+        let progressNavigation = NavBarController(rootViewController: progressVC)
+        let settingsNavigation = NavBarController(rootViewController: settingsVC)
 
         overviewNavigation.tabBarItem = UITabBarItem(title: Resources.Strings.TabBar.overview,
                                                      image: Resources.Images.TabBar.overview,

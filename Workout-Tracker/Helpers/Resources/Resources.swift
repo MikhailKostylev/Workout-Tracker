@@ -11,7 +11,11 @@ enum Resources {
     enum Colors {
         static let activeBlue = UIColor(named: "activeBlue")!
         static let inactiveGray = UIColor(named: "inactiveGray")!
+        
+        static let background = UIColor(named: "background")!
         static let separator = UIColor(named: "separator")!
+        
+        static let titleGray = UIColor(named: "titleGray")!
     }
     
     enum Strings {
@@ -29,6 +33,12 @@ enum Resources {
             static let session = UIImage(named: "session")
             static let progress = UIImage(named: "progress")
             static let settings = UIImage(named: "settings")
+        }
+    }
+    
+    enum Fonts {
+        static func helveticaRegular(with size: CGFloat) -> UIFont {
+            return UIFont(name: "Helvetica", size: size)!
         }
     }
 }
