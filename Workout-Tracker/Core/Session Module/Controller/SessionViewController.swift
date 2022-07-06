@@ -11,13 +11,14 @@ final class SessionViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupVC()
     }
     
     private func setupVC() {
-        navigationItem.title = "High Intensity Cardio"
-        addNavBarButton(at: .left , with: "Pause")
-        addNavBarButton(at: .right, with: "Finish")
+        navigationItem.title = Resources.Strings.NavBar.Session.title
+        addNavBarButton(at: .left , with: Resources.Strings.NavBar.Session.leftBarButton)
+        addNavBarButton(at: .right, with: Resources.Strings.NavBar.Session.rightBarButton)
     }
 }
 

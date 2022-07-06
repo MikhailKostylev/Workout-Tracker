@@ -20,6 +20,7 @@
 		1F3AD02D2872F45500068AA7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AD02C2872F45500068AA7 /* TabBarController.swift */; };
 		1F3AD0362872F97B00068AA7 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AD0352872F97B00068AA7 /* Resources.swift */; };
 		1F3AD03A28730A1000068AA7 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AD03928730A1000068AA7 /* UIView+Ext.swift */; };
+		1FFCEB542875B1D700B1E515 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCEB532875B1D700B1E515 /* SecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1F3AD02C2872F45500068AA7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1F3AD0352872F97B00068AA7 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		1F3AD03928730A1000068AA7 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		1FFCEB532875B1D700B1E515 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,8 @@
 		1F0BD2122874955B0078103B /* Overview Module */ = {
 			isa = PBXGroup;
 			children = (
-				1F0BD20F287491220078103B /* OverviewViewController.swift */,
+				1FFCEB522875B1B800B1E515 /* Views */,
+				1FFCEB552875B99000B1E515 /* Controller */,
 			);
 			path = "Overview Module";
 			sourceTree = "<group>";
@@ -72,7 +75,7 @@
 		1F0BD213287495660078103B /* Session Module */ = {
 			isa = PBXGroup;
 			children = (
-				1F0BD216287495B50078103B /* SessionViewController.swift */,
+				1FFCEB562875B9A900B1E515 /* Controller */,
 			);
 			path = "Session Module";
 			sourceTree = "<group>";
@@ -80,7 +83,7 @@
 		1F0BD2142874957A0078103B /* Progress Module */ = {
 			isa = PBXGroup;
 			children = (
-				1F0BD218287495DF0078103B /* ProgressViewController.swift */,
+				1FFCEB572875B9AF00B1E515 /* Controller */,
 			);
 			path = "Progress Module";
 			sourceTree = "<group>";
@@ -88,7 +91,7 @@
 		1F0BD215287495830078103B /* Settings Module */ = {
 			isa = PBXGroup;
 			children = (
-				1F0BD21A287495FC0078103B /* SettingsViewController.swift */,
+				1FFCEB582875B9B600B1E515 /* Controller */,
 			);
 			path = "Settings Module";
 			sourceTree = "<group>";
@@ -168,6 +171,46 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1FFCEB522875B1B800B1E515 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FFCEB532875B1D700B1E515 /* SecondaryButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1FFCEB552875B99000B1E515 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F0BD20F287491220078103B /* OverviewViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1FFCEB562875B9A900B1E515 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F0BD216287495B50078103B /* SessionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1FFCEB572875B9AF00B1E515 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F0BD218287495DF0078103B /* ProgressViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1FFCEB582875B9B600B1E515 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F0BD21A287495FC0078103B /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFCEB542875B1D700B1E515 /* SecondaryButton.swift in Sources */,
 				1F3806662872E6C9002CBB51 /* BaseViewController.swift in Sources */,
 				1F3AD0362872F97B00068AA7 /* Resources.swift in Sources */,
 				1F0BD21B287495FC0078103B /* SettingsViewController.swift in Sources */,

@@ -11,12 +11,13 @@ final class ProgressViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupVC()
     }
     
     private func setupVC() {
-        navigationItem.title = "Workout Progress"
-        addNavBarButton(at: .left , with: "Export")
-        addNavBarButton(at: .right, with: "Details")
+        navigationItem.title = Resources.Strings.NavBar.Progress.title
+        addNavBarButton(at: .left , with: Resources.Strings.NavBar.Progress.leftBarButton)
+        addNavBarButton(at: .right, with: Resources.Strings.NavBar.Progress.rightBarButton)
     }
 }

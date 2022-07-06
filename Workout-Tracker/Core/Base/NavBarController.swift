@@ -11,6 +11,7 @@ final class NavBarController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configure()
     }
     
@@ -22,6 +23,6 @@ final class NavBarController: UINavigationController {
             .font: Resources.Fonts.helveticaRegular(with: 17)
         ]
         
-        navigationBar.addButtonBorder(with: Resources.Colors.separator, height: 1)
+        navigationBar.addBottomBorder(with: Resources.Colors.separator, height: 1)
     }
 }

@@ -16,11 +16,14 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addViews()
+        layoutViews()
         configure()
     }
 }
 
-extension BaseViewController {
+@objc extension BaseViewController {
     
     func addViews() {}
     
@@ -30,11 +33,11 @@ extension BaseViewController {
         view.backgroundColor = Resources.Colors.background
     }
     
-    @objc func navBarLeftButtonHandler() {
+    func navBarLeftButtonHandler() {
         print(#function)
     }
     
-    @objc func navBarRightButtonHandler() {
+    func navBarRightButtonHandler() {
         print(#function)
     }
 }

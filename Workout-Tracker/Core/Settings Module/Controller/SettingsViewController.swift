@@ -11,10 +11,11 @@ class SettingsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupVC()
     }
     
     private func setupVC() {
-        navigationItem.title = "Settings"
+        navigationItem.title = Resources.Strings.NavBar.Settings.title
     }
 }
