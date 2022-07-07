@@ -35,9 +35,9 @@ extension UIView {
         return frame.size.width + frame.origin.x
     }
     
-    @discardableResult func prepareForAutoLayout() -> Self {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        return self
+    func addView(_ view: UIView) {
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
     }
     
     // MARK: - Add Border

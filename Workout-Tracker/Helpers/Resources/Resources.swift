@@ -29,6 +29,7 @@ enum Resources {
         
         enum NavBar {
             enum Overview {
+                static let title = "Today"
                 static let allWorkoutsButtonTitle = "All Workouts"
             }
             
@@ -52,14 +53,15 @@ enum Resources {
     
     enum Images {
         enum TabBar {
-            static let overview = UIImage(named: "overview")
-            static let session = UIImage(named: "session")
-            static let progress = UIImage(named: "progress")
-            static let settings = UIImage(named: "settings")
+            static let overview = UIImage(named: "overview_icon")
+            static let session = UIImage(named: "session_icon")
+            static let progress = UIImage(named: "progress_icon")
+            static let settings = UIImage(named: "settings_icon")
         }
         
         enum NavBar {
             static let allWorkoutsButtonIcon = UIImage(named: "down_arrow")
+            static let addButton = UIImage(named: "add_button")
         }
     }
     

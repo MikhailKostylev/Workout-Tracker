@@ -38,13 +38,11 @@ final class SecondaryButton: UIButton {
 private extension SecondaryButton {
     
     func addViews() {
-        addSubview(label)
-        addSubview(iconView)
+        addView(label)
+        addView(iconView)
     }
     
     func layoutViews() {
-        label.prepareForAutoLayout()
-        iconView.prepareForAutoLayout()
         
         let constraints = [
             iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
