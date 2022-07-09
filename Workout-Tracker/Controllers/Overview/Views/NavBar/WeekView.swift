@@ -34,8 +34,8 @@ extension WeekView {
         NSLayoutConstraint.activate(constraints)
     }
     
-    override func configureView() {
-        super.configureView()
+    override func configureViews() {
+        super.configureViews()
                 
         stackView.axis = .horizontal
         stackView.spacing = 7

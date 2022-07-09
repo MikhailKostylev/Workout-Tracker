@@ -15,15 +15,32 @@ final class OverviewNavBar: BaseView {
     private let allWorkoutsButtonWidth: CGFloat = 130
     private let weekViewHeight: CGFloat = 47
     
-    private lazy var titleLabel = UILabel()
-    private lazy var allWorkoutsButton = SecondaryButton()
-    private lazy var addButton = UIButton()
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = R.Strings.NavBar.Overview.title
+        label.textColor = R.Colors.titleGray
+        label.font = R.Fonts.helveticaRegular(with: 22)
+        return label
+    }()
+
+    private lazy var allWorkoutsButton: BaseButton = {
+        let button = BaseButton(with: .secondary)
+        button.setTitle(R.Strings.NavBar.Overview.allWorkoutsButtonTitle)
+        return button
+    }()
+
+    private lazy var addButton: UIButton = {
+        let button = UIButton()
+        button.setImage(R.Images.NavBar.addButton, for: .normal)
+        return button
+    }()
+    
     private lazy var weekView = WeekView()
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        addBottomBorder(with: Resources.Colors.separator, height: 1)
+        addBottomBorder(with: R.Colors.separator, height: 1)
     }
     
     func addAllWorkoutsAction(_ action: Selector, with target: Any?) {
@@ -58,7 +75,7 @@ extension OverviewNavBar {
             allWorkoutsButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             allWorkoutsButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -padding),
             allWorkoutsButton.heightAnchor.constraint(equalToConstant: allWorkoutsButtonHeight),
-            allWorkoutsButton.widthAnchor.constraint(equalToConstant: allWorkoutsButtonWidth),
+//            allWorkoutsButton.widthAnchor.constraint(equalToConstant: allWorkoutsButtonWidth),
             
             titleLabel.centerYAnchor.constraint(equalTo: allWorkoutsButton.centerYAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: allWorkoutsButton.leadingAnchor),
@@ -72,17 +89,5 @@ extension OverviewNavBar {
         ]
         
         NSLayoutConstraint.activate(constraints)
-    }
-    
-    override func configureView() {
-        super.configureView()
-        
-        backgroundColor = .white
-        
-        titleLabel.text = Resources.Strings.NavBar.Overview.title
-        titleLabel.textColor = Resources.Colors.titleGray
-        titleLabel.font = Resources.Fonts.helveticaRegular(with: 22)
-        allWorkoutsButton.setTitle(Resources.Strings.NavBar.Overview.allWorkoutsButtonTitle)
-        addButton.setImage(Resources.Images.NavBar.addButton, for: .normal)
     }
 }

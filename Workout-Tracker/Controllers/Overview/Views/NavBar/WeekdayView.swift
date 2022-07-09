@@ -20,13 +20,13 @@ extension WeekView {
             let day = Calendar.current.component(.day, from: currentDay)
             
             let isTooday = currentDay.stripTime() == Date().stripTime()
-            backgroundColor = isTooday ? Resources.Colors.activeBlue : Resources.Colors.background
+            backgroundColor = isTooday ? R.Colors.activeBlue : R.Colors.background
             
             nameLabel.text = name.uppercased()
-            nameLabel.textColor = isTooday ? .white : Resources.Colors.inactiveGray
+            nameLabel.textColor = isTooday ? .white : R.Colors.inactiveGray
             
             dateLabel.text = "\(day)"
-            dateLabel.textColor = isTooday ? .white : Resources.Colors.inactiveGray
+            dateLabel.textColor = isTooday ? .white : R.Colors.inactiveGray
         }
     }
 }
@@ -52,16 +52,16 @@ extension WeekView.WeekdayView {
         NSLayoutConstraint.activate(constraints)
     }
     
-    override func configureView() {
-        super.configureView()
+    override func configureViews() {
+        super.configureViews()
         
         layer.cornerRadius = 5
         layer.masksToBounds = true
         
-        nameLabel.font = Resources.Fonts.helveticaRegular(with: 9)
+        nameLabel.font = R.Fonts.helveticaRegular(with: 9)
         nameLabel.textAlignment = .center
         
-        dateLabel.font = Resources.Fonts.helveticaRegular(with: 15)
+        dateLabel.font = R.Fonts.helveticaRegular(with: 15)
         dateLabel.textAlignment = .center
         
         stackView.axis = .vertical

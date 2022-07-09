@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Resources {
+enum R {
     enum Colors {
         static let activeBlue = UIColor(named: "activeBlue")!
         static let inactiveGray = UIColor(named: "inactiveGray")!
@@ -21,10 +21,14 @@ enum Resources {
     
     enum Strings {
         enum TabBar {
-            static let overview = "Overview"
-            static let session = "Session"
-            static let progress = "Progress"
-            static let settings = "Settings"
+            static func title(for tab: Tabs) -> String {
+                switch tab {
+                case .overview: return "Overview"
+                case .session: return "Session"
+                case .progress: return "Progress"
+                case .settings: return "Settings"
+                }
+            }
         }
         
         enum NavBar {
@@ -53,10 +57,14 @@ enum Resources {
     
     enum Images {
         enum TabBar {
-            static let overview = UIImage(named: "overview_icon")
-            static let session = UIImage(named: "session_icon")
-            static let progress = UIImage(named: "progress_icon")
-            static let settings = UIImage(named: "settings_icon")
+            static func icon(for tab: Tabs) -> UIImage? {
+                switch tab {
+                case .overview: return UIImage(named: "overview_icon")
+                case .session: return UIImage(named: "session_icon")
+                case .progress: return UIImage(named: "progress_icon")
+                case .settings: return UIImage(named: "settings_icon")
+                }
+            }
         }
         
         enum NavBar {
@@ -67,7 +75,7 @@ enum Resources {
     
     enum Fonts {
         static func helveticaRegular(with size: CGFloat) -> UIFont {
-            return UIFont(name: "Helvetica", size: size)!
+            return UIFont(name: "Helvetica", size: size) ?? UIFont()
         }
     }
 }

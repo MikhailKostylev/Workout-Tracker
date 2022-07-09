@@ -14,17 +14,22 @@ class BaseView: UIView {
         
         addViews()
         layoutViews()
-        configureView()
+        configureViews()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        
+        addViews()
+        layoutViews()
+        configureViews()
     }
 }
 
 @objc extension BaseView {
-    
     func addViews() {}
     func layoutViews() {}
-    func configureView() {}
+    func configureViews() {
+        backgroundColor = .white
+    }
 }

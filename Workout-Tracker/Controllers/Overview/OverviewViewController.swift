@@ -38,8 +38,8 @@ extension OverviewViewController {
         NSLayoutConstraint.activate(constraints)
     }
     
-    override func configure() {
-        super.configure()
+    override func configureViews() {
+        super.configureViews()
         
         navigationController?.navigationBar.isHidden = true
     }
