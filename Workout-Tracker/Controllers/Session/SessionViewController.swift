@@ -11,8 +11,8 @@ final class SessionViewController: BaseViewController {
     
     private let padding: CGFloat = 15
     
-    private lazy var timerView: BaseInfoView = {
-        let view = BaseInfoView(with: "Test", buttonTitle: "Test Buttton")
+    private lazy var timerView: TimerView = {
+        let view = TimerView()
         return view
     }()
 
@@ -37,7 +37,7 @@ extension SessionViewController {
             timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: padding),
             timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            timerView.heightAnchor.constraint(equalTo: view.widthAnchor, constant: -padding*2)
+            timerView.heightAnchor.constraint(equalTo: timerView.widthAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)
