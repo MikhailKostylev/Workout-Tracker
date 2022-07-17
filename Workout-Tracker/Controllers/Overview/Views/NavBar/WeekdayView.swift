@@ -10,14 +10,32 @@ import UIKit
 extension WeekView {
     final class WeekdayView: BaseView {
         
-        private lazy var nameLabel = UILabel()
-        private lazy var dateLabel = UILabel()
-        private lazy var stackView = UIStackView()
+        private lazy var nameLabel: UILabel = {
+            let label = UILabel()
+            label.font = R.Fonts.helveticaRegular(with: 9)
+            label.textAlignment = .center
+            return label
+        }()
+
+        private lazy var dateLabel: UILabel = {
+            let label = UILabel()
+            label.font = R.Fonts.helveticaRegular(with: 15)
+            label.textAlignment = .center
+            return label
+        }()
+
+        private lazy var stackView: UIStackView = {
+            let view = UIStackView()
+            view.spacing = 3
+            view.distribution = .equalCentering
+            view.axis = .vertical
+            return view
+        }()
         
         func configure(with index: Int, and name: String) {
             let startOfWeek = Date().startOfWeek
-            let currentDay = startOfWeek.goForward(to: index)
-            let day = Calendar.current.component(.day, from: currentDay)
+            let currentDay = startOfWeek.agoForward(to: index)
+            let day = Date.calendar.component(.day, from: currentDay)
             
             let isTooday = currentDay.stripTime() == Date().stripTime()
             backgroundColor = isTooday ? R.Colors.activeBlue : R.Colors.background
@@ -57,15 +75,5 @@ extension WeekView.WeekdayView {
         
         layer.cornerRadius = 5
         layer.masksToBounds = true
-        
-        nameLabel.font = R.Fonts.helveticaRegular(with: 9)
-        nameLabel.textAlignment = .center
-        
-        dateLabel.font = R.Fonts.helveticaRegular(with: 15)
-        dateLabel.textAlignment = .center
-        
-        stackView.axis = .vertical
-        stackView.spacing = 3
-        stackView.distribution = .equalCentering
     }
 }
