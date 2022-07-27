@@ -20,17 +20,6 @@ enum R {
     }
     
     enum Strings {
-        enum TabBar {
-            static func title(for tab: Tabs) -> String {
-                switch tab {
-                case .overview: return "Overview"
-                case .session: return "Session"
-                case .progress: return "Progress"
-                case .settings: return "Settings"
-                }
-            }
-        }
-        
         enum NavBar {
             enum Overview {
                 static let title = "Today"
@@ -52,6 +41,22 @@ enum R {
             
             enum Settings {
                 static let title = "Settings"
+            }
+        }
+        
+        enum Session {
+            static let elapsedTime = "Elapsed Time"
+            static let remainingTime = "Remaining Time"
+        }
+        
+        enum TabBar {
+            static func title(for tab: Tabs) -> String {
+                switch tab {
+                case .overview: return "Overview"
+                case .session: return "Session"
+                case .progress: return "Progress"
+                case .settings: return "Settings"
+                }
             }
         }
     }

@@ -50,8 +50,7 @@ extension SessionViewController {
         let constraints = [
             timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: padding),
             timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            timerView.heightAnchor.constraint(equalTo: timerView.widthAnchor)
+            timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
         ]
         
         NSLayoutConstraint.activate(constraints)
